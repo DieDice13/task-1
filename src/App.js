@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+export const App = () => {
+  const year = new Date().getFullYear(); // Императивный подход
+
+  // Здесь начинается декларативный подход
   return (
     <div className="App">
       <header className="App-header">
@@ -17,9 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        <h1>{year}</h1>
       </header>
     </div>
   );
-}
-
-export default App;
+};
